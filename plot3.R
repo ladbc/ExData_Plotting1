@@ -13,7 +13,7 @@ power <- mutate(power, Date_Time = paste(power$Date, power$Time, sep = " "))
 power$Date_Time <- strptime(power$Date_Time, format = "%d/%m/%Y %H:%M:%S") 
 
 #Plot
-png('plot3.png')
+png('plot3.png', width = 480, height = 480, units = "px")
 par(mfrow = c(1,1), mar = c(6,5,2,2))
 with(power, plot(Date_Time, Sub_metering_1, type = "n", xlab = "", ylab = "Energy sub metering"))
 with(power, points(Date_Time, Sub_metering_1, type = "l"))
