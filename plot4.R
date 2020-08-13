@@ -12,7 +12,7 @@ library(dplyr)
 power <- mutate(power, Date_Time = paste(power$Date, power$Time, sep = " "))
 power$Date_Time <- strptime(power$Date_Time, format = "%d/%m/%Y %H:%M:%S") 
 
-png('plot4.png')
+png('plot4.png', width = 480, height = 480, units = "px")
 par(mfrow = c(2,2), mar = c(4,4,2,2))
 with(power, plot(Date_Time, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power"))
 with(power, plot(Date_Time, Voltage, type = "l", xlab = "datetime", ylab = "Voltage"))
