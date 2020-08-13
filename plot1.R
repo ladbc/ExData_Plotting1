@@ -8,7 +8,7 @@ power <- read.table("./household_power_consumption.txt", sep = ";", header = TRU
 power <- power[(power$Date == "1/2/2007"| power$Date == "2/2/2007"),]
 
 #Plot
-png('plot1.png')
+png('plot1.png', width = 480, height = 480, units = "px")
 with(power, hist(Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", 
                  ylab = "Frequency", main = "Global Active Power"))
 dev.off()
